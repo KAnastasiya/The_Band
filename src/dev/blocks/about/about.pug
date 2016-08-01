@@ -1,0 +1,23 @@
+section.about
+  a#about
+  div.artist
+    // Artists photo
+    img(src="").artist__photo
+
+    // Artists list
+    ul.artists__list
+      template#artists-item
+        li.artists__item
+          ul.artists__info
+            li.artists__name
+            li.artists__divider
+            li.artists__task
+
+    // Information about artist
+    div.artist__info
+      div.artist__name
+        p.artist__first-name
+        p.artist__second-name
+      div.artist__details
+        h3.artist__header Meet our band
+        p.artist__descr

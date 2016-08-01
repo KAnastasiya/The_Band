@@ -1,0 +1,203 @@
+// Set font settings
+// @param  {String}   $family       Font family
+// @param  {Keyword}  $weight       Font weight. Can be 'normal', 'bold', 'light', 'italic'
+// @param  {Number}   $size         Font size. Default value = $font-size
+// @param  {Color}    $color        Font color. Default value = $text-color
+// @param  {Number}   $line-height  Line height. Default value = $78px
+@mixin font(
+  $family,
+  $weight: normal,
+  $size: $font-size,
+  $color: $text-color,
+  $line-height: 78px
+) {
+  color: $color;
+  line-height: $line-height;
+  font : {
+    family: $family;
+    weight: $weight;
+    size: $size;
+  }
+}
+
+// Set width and height for element
+// @param  {Number}  $width   Width of element
+// @param  {Number}  $height  Height of element
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// Set size for square element
+// @param  {Number}  $size  Width and Height of element
+@mixin square($size) {
+  @include size($size, $size);
+}
+
+// Responsive image
+@mixin img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// Set dots
+// @param  {Color}   $color  Icon color
+// @param  {Number}  $size   Icon size
+@mixin icon-dot(
+  $color: $color-main--light,
+  $size: 12px
+) {
+  content: '\25CF';
+  color: $color;
+  font-size: $size;
+}
+
+// Set background-image
+// @param  {String}   $url              Path to the image
+// @param  {Keyword}  $repeat           Can be 'repeat', 'no-repeat', 'repeat-x', 'repeat-y'. Default value = no-repeat
+// @param  {Keyword/Number}  $position  Filling rules for this argument are similar to the appropriate css-property. Default value = center
+@mixin bg-image(
+  $url,
+  $repeat: no-repeat,
+  $position: center
+) {
+  background : {
+    image: url($url);
+    repeat: $repeat;
+    position: $position;
+  }
+}
+
+// Button settings
+// @param  {Color}  $color       Text color
+// @param  {Color}  $background  Background color
+// @param  {Color}  $border      Border color. Default value = $background
+@mixin button(
+  $color,
+  $background,
+  $border: $background
+) {
+  font-family: $font-family--oswald;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
+  min-width: 60px;
+  padding: 5px 10px;
+  border: 1px solid $border;
+  border-radius: 2px;
+  outline: none;
+
+  color: $color;
+  background-color: $background;
+
+  &:not(:first-of-type) {
+    margin-left: 20px;
+  }
+
+  &:not([disabled]) {
+    cursor: pointer;
+
+    &:focus {
+      opacity: 1;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+  }
+}
+
+// Vertically centers the element inside of its first non-static parent,
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Horizontally centers the element inside of its first non-static parent
+@mixin horizontal-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// Absolutely centers the element inside of its first non-static parent
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Creates a menu icon
+// The mixin uses the height of the icon and the weight of the bars to determine spacing. <div class="docs-example-burger"></div>
+// @param  {Color}   $color        Color to use for the icon. Default value = $color-grey
+// @param  {Color}   $color-hover  Color to use when the icon is hovered over. Default value = darken($color-grey, 30%)
+// @param  {Number}  $width        Width of the icon. Default value = 20px
+// @param  {Number}  $height       Height of the icon. Default value = 16px
+// @param  {Number}  $weight       Height of individual bars in the icon. Default value = 2px
+// @param  {Number}  $bars         Number of bars in the icon. Default value = 3
+@mixin hamburger(
+  $color: $color-main,
+  $color-hover: darken($color-main, 30%),
+  $width: 20px,
+  $height: 16px,
+  $weight: 2px,
+  $bars: 3
+) {
+  $shadow: ();
+  $hover-shadow: ();
+
+  // Spacing between bars
+  $spacing: floor(($height - ($weight * $bars)) / ($bars - 1));
+
+  // Icon container
+  width: $width;
+  height: $height;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+
+  // Icon bars
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: $weight;
+    background: $color;
+    top: 0;
+    left: 0;
+
+    @for $i from 2 through $bars {
+      $offset: ($weight + $spacing) * ($i - 1);
+      $shadow: append($shadow, 0 $offset 0 $color, comma);
+    }
+
+    box-shadow: $shadow;
+  }
+
+  // Hover state
+  @if $color-hover {
+    @for $i from 2 through $bars {
+      $offset: ($weight + $spacing) * ($i - 1);
+      $hover-shadow: append($hover-shadow, 0 $offset 0 $color-hover, comma);
+    }
+
+    &:hover::after {
+      background: $color-hover;
+      box-shadow: $hover-shadow;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+.discography {
+  @extend .col;
+  margin-right: 50px;
+
+  @media (max-width: $screen-sm-max) {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    @extend .table;
+    position: relative;
+
+    &[data-state="is-loading"] {
+      &::after  {
+        content: 'Loading...';
+        @include font($font-family--lora, bold);
+        @include absolute-center();
+      }
+    }10%
+
+    &[data-state="is-failure"] {
+      &::after  {
+        content: 'Loading failed';
+        @include font($font-family--lora, bold, $font-size, red);
+        @include absolute-center();
+      }
+    }
+  }
+
+  &__item {
+    @extend .table-row;
+
+    &[data-state="is-active"] {
+      .album-data {
+        color: lighten($color-main--light, 15%);
+      }
+
+      .album__year {
+        &::before {
+          color: currentColor;
+        }
+      }
+    }
+  }
+}
+
+.album {
+  &-data {
+    @extend .table-cell;
+    @include font($font-family--oswald, 300, $font-size--h5, $color-main, 60px);
+    text-transform: capitalize;
+
+    @media (max-width: $screen-sm-add) {
+      line-height: 40px;
+    }
+  }
+
+  &__name {
+    @extend .album-data;
+  }
+
+  &__year {
+    @extend .album-data;
+    padding-left: $table-cell-padding;
+
+    &::before {
+      @include icon-dot($color-add, 20px);
+      position: absolute;
+      left: -$table-cell-padding/2;
+    }
+
+    @media (max-width: $screen-lg-max) {
+      display: none;
+    }
+  }
+
+  &__cover-container {
+    @extend .col;
+    margin-right: 50px;
+    position: relative;
+
+    @media (max-width: $screen-sm-max) {
+      display: none;
+    }
+  }
+
+  &__cover {
+    @include img-responsive();
+    max-height: 100%;
+    @include absolute-center();
+  }
+
+  &__controls {
+    @extend .table-cell;
+
+    @media (max-width: $screen-sm-max) {
+      text-align: right;
+    }
+  }
+
+  &__play {
+    @extend .btn-additional;
+  }
+
+  &__buy {
+    @extend .btn-primary;
+
+    @media (max-width: $screen-md-max) {
+      display: none;
+    }
+  }
+}

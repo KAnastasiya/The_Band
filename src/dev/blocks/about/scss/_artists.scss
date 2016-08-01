@@ -1,0 +1,65 @@
+.artists {
+  &__list {
+    max-width: 600px;
+    position: absolute;
+    top: 45px;
+    right: 10%;
+    z-index: 1;
+
+    @media (min-width: $screen-lg-min) {
+      top: 65px;
+      transform: rotate(270deg);
+    }
+
+    @media (min-width: $screen-sm-add + 1) and (max-width: $screen-md-max) {
+      top: 35%;
+    }
+
+    @media (max-width: $screen-sm-add) {
+      top: none;
+    }
+  }
+
+  &__item {
+    display: block;
+    cursor: pointer;
+
+    &[data-state='is-active'] {
+      cursor: initial;
+      .artists-text,
+      .artists__divider::before {
+        color: $color-main--light;
+      }
+    }
+  }
+
+  &-text {
+    @include font($font-family--lora, normal, 14px, $color-add, $font-size + 10px);
+    text-transform: uppercase;
+    white-space: nowrap;
+    display: inline-block;
+    min-width: 160px;
+
+    &:first-of-type {
+      text-align: right;
+      padding-right: 10px;
+    }
+
+    &:last-of-type {
+      padding-left: 10px;
+    }
+  }
+
+  &__name,
+  &__task {
+    @extend .artists-text;
+  }
+
+  &__divider {
+    display: inline-block;
+    cursor: pointer;
+    &::before {
+      @include icon-dot($color-add, 20px);
+    }
+  }
+}

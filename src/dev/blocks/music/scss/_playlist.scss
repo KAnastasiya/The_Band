@@ -1,0 +1,47 @@
+.playlist {
+  @extend .col;
+
+  &__list {
+    @extend .table;
+  }
+
+  &__item {
+    @extend .table-row;
+
+    &[data-state="is-active"] {
+      .track-info {
+        color: $color-main;
+      }
+
+      .track__play {
+        @extend .icon--pause_sm;
+      }
+    }
+
+    &:not([data-state]) {
+      .track__play {
+        @extend .icon--play_sm;
+      }
+    }
+  }
+}
+
+.track {
+  &-info {
+    @include font($font-family--lora, italic, $font-size * 0.9, $color-main--light, $font-size * 1.6);
+    @extend .table-cell;
+  }
+
+  &__name {
+    @extend .track-info;
+  }
+
+  &__duration {
+    @extend .track-info;
+    text-align: right;
+  }
+
+  &__play {
+    @extend .btn-icon;
+  }
+}

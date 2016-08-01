@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: blocks/about/js-artists/components/ArtistList.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: blocks/about/js-artists/components/ArtistList.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>export default ArtistList;
+
+import Artist from './Artist';
+import { bindAllFunc } from './../../../../js-common/utils';
+
+/**
+ * Names of data-attributes and its values
+ * @constant
+ * @type  {Object}
+ */
+const dataAttr = {
+  'state': 'data-state',
+  'stateValue': 'is-active'
+};
+
+/**
+ * Names of DOM-elements classes
+ * @constant
+ * @type  {Object}
+ */
+const className = {
+  'artistItem': '.artists__item',
+  'name': '.artists__name',
+  'task': '.artists__task'
+};
+
+/**
+ * Render artists card
+ * @constructor
+ * @param  {Element}     template   DOM-element, that contains template for card of artist
+ * @param  {ArtistData}  data       Artists information (name, photo...)
+ */
+function ArtistList(data, template, container) {
+  bindAllFunc(this);
+  this.data = data;
+  this._createArtistListElement(template);
+  this._setArtistListDataToElement();
+  this._renderTo(container);
+}
+
+/**
+ * Create record of artist list by template
+ * @param  {Element}  template  DOM-element, that contains template
+ */
+ArtistList.prototype._createArtistListElement = function(template) {
+  let artistToClone;
+
+  if ('content' in template) {
+    artistToClone = template.content.querySelector(className.artistItem);
+  } else {
+    artistToClone = template.querySelector(className.artistItem);
+  }
+
+  this.element = artistToClone.cloneNode(true);
+};
+
+/**
+ * Set data in record of artist list
+ */
+ArtistList.prototype._setArtistListDataToElement = function() {
+  this.element.querySelector(className.name).textContent = this.data.getArtistFirstName() + ' '
+                                                        + this.data.getArtistSecondName();
+  this.element.querySelector(className.task).textContent = this.data.getArtistTask();
+};
+
+/**
+ * Insert record of artists list to the container
+ * @param  {Element}  container  DOM-element of container
+ */
+ArtistList.prototype._renderTo = function(container) {
+  container.appendChild(this.element);
+  this.element.addEventListener('click', this._onArtistClick);
+};
+
+/**
+ * Clicking on artists list item handler
+ * @param  {Element}  artistElement  DOM-element, that clicked
+ */
+ArtistList.prototype.chooseArtist = function(element) {
+  let artists = document.querySelectorAll(className.artistItem);
+
+  for(let i = 0; i &lt; artists.length; i++) {
+    artists[i].removeAttribute(dataAttr.state);
+  }
+  element.setAttribute(dataAttr.state, dataAttr.stateValue);
+
+  let artist = new Artist(this.data);
+};
+
+/**
+ * Clicking on artists list item handler
+ * @param  {Object}  event  Event
+ */
+ArtistList.prototype._onArtistClick = function(event) {
+  event.stopPropagation();
+  this.chooseArtist(this.element);
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Album.html">Album</a></li><li><a href="AlbumData.html">AlbumData</a></li><li><a href="Artist.html">Artist</a></li><li><a href="ArtistData.html">ArtistData</a></li><li><a href="ArtistList.html">ArtistList</a></li><li><a href="Concert.html">Concert</a></li><li><a href="ConcertData.html">ConcertData</a></li><li><a href="ConcertList.html">ConcertList</a></li><li><a href="PlayList.html">PlayList</a></li><li><a href="Track.html">Track</a></li></ul><h3>Global</h3><ul><li><a href="global.html#_chooseNavItem">_chooseNavItem</a></li><li><a href="global.html#_getCurrentScrollPosition">_getCurrentScrollPosition</a></li><li><a href="global.html#_getNavLinks">_getNavLinks</a></li><li><a href="global.html#_onDocClick">_onDocClick</a></li><li><a href="global.html#_onNavIconClick">_onNavIconClick</a></li><li><a href="global.html#_onNavItemClick">_onNavItemClick</a></li><li><a href="global.html#_onPageScroll">_onPageScroll</a></li><li><a href="global.html#_onResize">_onResize</a></li><li><a href="global.html#_setCollapseNav">_setCollapseNav</a></li><li><a href="global.html#aboutContainer">aboutContainer</a></li><li><a href="global.html#addLeadingNull">addLeadingNull</a></li><li><a href="global.html#albumDataList">albumDataList</a></li><li><a href="global.html#albumTemplate">albumTemplate</a></li><li><a href="global.html#ANIMATE_DURATION">ANIMATE_DURATION</a></li><li><a href="global.html#artistDataList">artistDataList</a></li><li><a href="global.html#AudioPlayer">AudioPlayer</a></li><li><a href="global.html#bindAllFunc">bindAllFunc</a></li><li><a href="global.html#className">className</a></li><li><a href="global.html#concertDataList">concertDataList</a></li><li><a href="global.html#DATA_URL">DATA_URL</a></li><li><a href="global.html#dataAttr">dataAttr</a></li><li><a href="global.html#DEFAULT_COVER">DEFAULT_COVER</a></li><li><a href="global.html#DEFAULT_PHOTO">DEFAULT_PHOTO</a></li><li><a href="global.html#endLoading">endLoading</a></li><li><a href="global.html#futureConcertsContainer">futureConcertsContainer</a></li><li><a href="global.html#LOAD_COVER_TIMEOUT">LOAD_COVER_TIMEOUT</a></li><li><a href="global.html#LOAD_PHOTO_TIMEOUT">LOAD_PHOTO_TIMEOUT</a></li><li><a href="global.html#loadingIsProgress">loadingIsProgress</a></li><li><a href="global.html#monthNum2Name">monthNum2Name</a></li><li><a href="global.html#NAV_COLLAPSE">NAV_COLLAPSE</a></li><li><a href="global.html#navItemIsCLicked">navItemIsCLicked</a></li><li><a href="global.html#nextConcerts">nextConcerts</a></li><li><a href="global.html#SERVER_TIMEOUT">SERVER_TIMEOUT</a></li><li><a href="global.html#showLoadingError">showLoadingError</a></li><li><a href="global.html#topMenu">topMenu</a></li><li><a href="global.html#topMenuItemLinks">topMenuItemLinks</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Mon Aug 01 2016 10:00:13 GMT+0300 (EEST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

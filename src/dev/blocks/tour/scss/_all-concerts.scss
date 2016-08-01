@@ -1,0 +1,73 @@
+.concerts {
+  &__list {
+    border-right: 1px solid $color-add;
+    transform: rotate(270deg);
+    z-index: 1;
+    max-width: 310px;
+    display: inline-block;
+
+    position: absolute;
+    top: -165px;
+    left: 40%;
+
+    @media (max-width: $screen-md-max) {
+      display: none;
+    }
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    cursor: pointer;
+
+    .concerts-text,
+    .concerts__place-date::after {
+      color: $color-main--light;
+    }
+
+    &[data-state='is-past'] {
+      cursor: initial;
+
+      .concerts-text,
+      .concerts__place-date::after {
+        color: $color-add;
+      }
+    }
+
+    &[data-state='is-active'] {
+      cursor: initial;
+
+      .concerts-text,
+      .concerts__place-date::after {
+        color: $color-main;
+      }
+    }
+  }
+
+  &__info {
+    padding: 15px 0;
+  }
+
+  &-text {
+    @include font($font-family--lora, normal, 14px, $color-add, 20px);
+    text-transform: uppercase;
+    text-align: right;
+    white-space: nowrap;
+    padding-right: 20px;
+  }
+
+  &__place-date {
+    @extend .concerts-text;
+
+    &::after {
+      @include icon-dot($color-add, 20px);
+      position: absolute;
+      right: -6px;
+      top: 30%;
+    }
+  }
+
+  &__city {
+    @extend .concerts-text;
+  }
+}

@@ -1,0 +1,145 @@
+[
+  {
+    "id": "0",
+    "year": "2015",
+    "name": "Surprise without flaws",
+    "cover": "images/tracks/surprise_without_flaws/cover.png",
+    "tracks": [
+      {
+        "id": "0",
+        "name": "Clouds in the forest",
+        "url": "surprise_without_flaws/01.The_Band_-_I_shall_be_Released_Pesni-Tut",
+        "duration": "3:20"
+      },
+      {
+        "id": "1",
+        "name": "Rat In The River",
+        "url": "surprise_without_flaws/02.imany_-_the_good__the_bad_and_the_crazy",
+        "duration": "2:48"
+      },
+      {
+        "id": "2",
+        "name": "Giants And Companions",
+        "url": "surprise_without_flaws/01.The_Band_-_I_shall_be_Released_Pesni-Tut",
+        "duration": "2:27"
+      },
+      {
+        "id": "3",
+        "name": "Ashamed Of Light",
+        "url": "surprise_without_flaws/02.imany_-_the_good__the_bad_and_the_crazy",
+        "duration": "3:32"
+      },
+      {
+        "id": "4",
+        "name": "Doubting The Forest",
+        "url": "surprise_without_flaws/01.The_Band_-_I_shall_be_Released_Pesni-Tut",
+        "duration": "2:40"
+      },
+      {
+        "id": "5",
+        "name": "Criminals Of The Lake",
+        "url": "surprise_without_flaws/02.imany_-_the_good__the_bad_and_the_crazy",
+        "duration": "2:55"
+      },
+      {
+        "id": "6",
+        "name": "Curse Of Eternity",
+        "url": "surprise_without_flaws/01.The_Band_-_I_shall_be_Released_Pesni-Tut",
+        "duration": "1:33"
+      },
+      {
+        "id": "7",
+        "name": "Fog In My Town",
+        "url": "surprise_without_flaws/02.imany_-_the_good__the_bad_and_the_crazy",
+        "duration": "2:55"
+      },
+      {
+        "id": "8",
+        "name": "Serpent In The Mountains",
+        "url": "surprise_without_flaws/01.The_Band_-_I_shall_be_Released_Pesni-Tut",
+        "duration": "3:24"
+      }
+    ]
+  },
+
+  {
+    "id": "1",
+    "year": "2014",
+    "name": "Mists of a shadow",
+    "cover": "images/tracks/mists_of_a_shadow/cover.png",
+    "tracks": [
+      {
+        "id": "0",
+        "name": "Ashamed Of Light",
+        "url": "mists_of_a_shadow/02.imany_-_the_good__the_bad_and_the_crazy",
+        "duration": "11:48"
+      },
+      {
+        "id": "1",
+        "name": "Giants And Companions",
+        "url": "mists_of_a_shadow/01.The_Band_-_I_shall_be_Released_Pesni-Tut",
+        "duration": "3:20"
+      },
+      {
+        "id": "2",
+        "name": "Rat In The River",
+        "url": "mists_of_a_shadow/02.imany_-_the_good__the_bad_and_the_crazy",
+        "duration": "2:48"
+      }
+    ]
+  },
+
+  {
+    "id": "2",
+    "year": "2013",
+    "name": "Heroes of the sun",
+    "cover": "images/tracks/heroes_of_the_sun/cover.png",
+    "tracks": [
+      {
+        "id": "0",
+        "name": "Clouds in the forest",
+        "url": "heroes_of_the_sun/01.The_Band_-_I_shall_be_Released_Pesni-Tut",
+        "duration": "3:20"
+      },
+      {
+        "id": "1",
+        "name": "Rat In The River",
+        "url": "heroes_of_the_sun/02.imany_-_the_good__the_bad_and_the_crazy",
+        "duration": "2:48"
+      },
+      {
+        "id": "2",
+        "name": "Giants And Companions",
+        "url": "heroes_of_the_sun/01.The_Band_-_I_shall_be_Released_Pesni-Tut",
+        "duration": "2:27"
+      },
+      {
+        "id": "3",
+        "name": "Ashamed Of Light",
+        "url": "heroes_of_the_sun/02.imany_-_the_good__the_bad_and_the_crazy",
+        "duration": "3:32"
+      }
+    ]
+  },
+
+  {
+    "id": "3",
+    "year": "2012",
+    "name": "Picture of the past",
+    "cover": "images/tracks/picture_of_the_past/cover.png",
+    "tracks": [
+      {
+        "id": "0",
+        "name": "Rat In The River",
+        "url": "picture_of_the_past/02.imany_-_the_good__the_bad_and_the_crazy",
+        "duration": "2:48"
+      },
+      {
+        "id": "1",
+        "name": "Clouds in the forest",
+        "url": "picture_of_the_past/01.The_Band_-_I_shall_be_Released_Pesni-Tut",
+        "duration": "3:20"
+      }
+    ]
+  }
+]

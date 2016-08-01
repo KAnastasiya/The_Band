@@ -1,0 +1,38 @@
+// Colors
+$color-main:                  #241c18;
+$color-main--light:           #826b60;
+$color-add:                   #e4dddb;
+
+$text-color:                  $color-main;
+
+// Typography
+$font-family--lora:           Lora, serif;
+$font-family--oswald:         Oswald, sans-serif;
+
+$font-size:                   18px;
+$font-size--h1:               75px;
+$font-size--h2:               55px;
+$font-size--h3:               32px;
+$font-size--h4:               24px;
+$font-size--h5:               20px;
+
+// Responsive
+$screen-xs-max:               360px;
+$screen-sm-min:               $screen-xs-max + 1;
+$screen-sm-max:               768px;
+$screen-md-min:               $screen-sm-max + 1;
+$screen-md-max:               992px;
+$screen-lg-min:               $screen-md-max + 1;
+$screen-lg-max:               1200px;
+$screen-xl-min:               $screen-lg-max + 1;
+
+$screen-sm-add:               525px;
+
+// Layout
+$page-horizontal-margin:      50px;
+$page-vertical-margin:        40px;
+
+$page-horizontal-margin--xs:  20px;
+$page-vertical-margin--xs:    30px;
+
+$table-cell-padding:          30px;

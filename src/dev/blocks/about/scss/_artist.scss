@@ -1,0 +1,93 @@
+.artist {
+  position: relative;
+
+  &__photo {
+    @extend .page_bg;
+  }
+
+  &__info {
+    padding: 0 $page-horizontal-margin;
+
+    position: absolute;
+    top: 215px;
+    bottom: initial;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    @media (min-width: $screen-lg-min) {
+      top: initial;
+      bottom: $page-vertical-margin;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      flex-flow: column wrap;
+    }
+
+    @media (max-width: $screen-md-max) {
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &__name {
+    flex: 0 0 50%;
+
+    @media (max-width: $screen-sm-max) {
+      display: none;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      margin-right: 100px;
+    }
+  }
+
+  &__first-name  {
+    @extend .main-header;
+    color: $color-main--light;
+    bottom: -50px;
+
+    @media (max-width: $screen-lg-max) {
+      bottom: initial;
+    }
+  }
+
+  &__second-name {
+    @extend .main-header;
+    color: $color-main;
+    bottom: -55px;
+
+    @media (max-width: $screen-lg-max) {
+      bottom: initial;
+    }
+  }
+
+  &__details {
+    flex: 1 1 50%;
+  }
+
+  &__header {
+    padding-bottom: 20px;
+    text-align: center;
+
+    @media (max-width: $screen-lg-max) {
+      display: none;
+    }
+  }
+
+  &__descr {
+    max-height: 180px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    @media (max-width: $screen-md-max) {
+      display: none;
+    }
+
+    &::after {
+      content: '  ...';
+      @include font($font-family--lora, normal, $font-size, $color-main, 36px);
+    }
+  }
+}

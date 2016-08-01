@@ -1,0 +1,31 @@
+section.contact
+  a#contact
+  div.contact__container
+    // Background
+    img(src="images/contact/img/contact-bg.png", alt="Contact background").contact__bg
+
+    div.contact__content
+      div.contact__header-container
+        p.contact__header Contact
+        p.contact__phone +48 202 - 555 - 0114
+
+      div.contact__data
+        // Subscribe
+        div.subscribe
+          button(type="submite").subscribe__btn Subscribe
+          input(type="text").subscribe__input
+
+        // Social
+        div.social
+          ul.social__list
+            li.social__item
+              a(href="#", target="_blank").icon--facebook
+            li.social__item
+              a(href="#", target="_blank").icon--youtube
+
+    // Footer
+    footer.page-footer
+      p.page-footer__text Copyright 2016 © by The Band
+
+      // Navigation
+      include ../navigation/navigation

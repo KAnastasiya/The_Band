@@ -1,0 +1,71 @@
+.player {
+  @extend .col;
+
+  &__album {
+    @include font($font-family--oswald, 300, $font-size--h5, $color-main, $font-size--h4 + 8px);
+    padding-bottom: 5px;
+  }
+
+  &__track {
+    @include font($font-family--lora, italic, $font-size * 0.9, $color-main--light, $font-size * 1.6);
+  }
+
+  &__controls {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  &__state {
+    @extend .btn-icon;
+
+    &[data-state="pause"] {
+      @extend .icon--pause;
+
+      &[disabled] {
+        @extend .icon--pause-disabled;
+      }
+    }
+
+    &[data-state="play"] {
+      @extend .icon--play;
+
+      &[disabled] {
+        @extend .icon--play-disabled;
+      }
+    }
+  }
+
+  &__prev {
+    @extend .btn-icon;
+    @extend .icon--prev;
+
+    &[disabled] {
+      @extend .icon--prev-disabled;
+    }
+  }
+
+  &__next {
+    @extend .btn-icon;
+    @extend .icon--next;
+
+    &[disabled] {
+      @extend .icon--next-disabled;
+    }
+  }
+
+  &__progress {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  &__total-progress {
+    width: 100%;
+    background-color: $color-add;
+  }
+
+  &__current-progress {
+    width: 0;
+    height: 8px;
+    background-color: $color-main--light;
+  }
+}

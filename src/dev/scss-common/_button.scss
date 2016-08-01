@@ -1,0 +1,18 @@
+.btn {
+  &-primary {
+    @include button($color-add, $color-main--light);
+  }
+
+  &-additional {
+    @include button($color-main--light, $color-add);
+  }
+
+  &-icon {
+    @include button(transparent, transparent);
+    min-width: 0;
+
+    &:not(:last-of-type) {
+      margin-right: 50px;
+    }
+  }
+}

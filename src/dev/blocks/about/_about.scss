@@ -1,0 +1,8 @@
+.about {
+  @media (max-width: $screen-xs-max) {
+    display: none;
+  }
+}
+
+@import './scss/artists';
+@import './scss/artist';

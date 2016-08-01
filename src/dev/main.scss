@@ -1,0 +1,20 @@
+// Variables
+@import './scss-common/_variables';
+
+// Mixins
+@import './scss-common/_mixins';
+
+// General settings
+@import './scss-common/_normalize';
+@import './scss-common/_fonts';
+@import './scss-common/_scaffolding';
+@import './scss-common/_button';
+@import './scss-common/_icons';
+
+// BEM blocks
+@import './blocks/navigation/_navigation';
+@import './blocks/header/_header';
+@import './blocks/about/_about';
+@import './blocks/music/_music';
+@import './blocks/tour/_tour';
+@import './blocks/contact/_contact';
