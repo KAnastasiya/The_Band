@@ -14,7 +14,7 @@ const LOAD_COVER_TIMEOUT = 10000;
  * @constant
  * @type  {String}
  */
-const DEFAULT_COVER = 'images/music/img/cover.png';
+const DEFAULT_COVER = 'images/music/img/cover.jpg';
 
 /**
  * Names of data-attributes and its values

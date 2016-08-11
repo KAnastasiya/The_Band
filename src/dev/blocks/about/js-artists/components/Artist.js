@@ -7,7 +7,7 @@ import { bindAllFunc } from './../../../../js-common/utils';
  * @constant
  * @type  {String}
  */
-const DEFAULT_PHOTO = 'images/about/img/photo.png';
+const DEFAULT_PHOTO = 'images/about/img/photo.jpg';
 
 /**
  * Timeout of loading photo from server

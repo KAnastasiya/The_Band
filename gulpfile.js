@@ -66,8 +66,12 @@ gulp.task('sprite', () => {
 });
 
 // Images optimization
-gulp.task('img', () => {
-  return gulp.src(['src/dev/blocks/**/img/*.*', 'src/img/icon.png', 'src/server/**/**/*.png'])
+gulp.task('cleanImg', () => {
+  return del('src/img');
+});
+
+gulp.task('img', ['cleanImg', 'sprite'], () => {
+  return gulp.src(['src/dev/blocks/**/img/*.*', 'src/img/icon.png', 'src/server/**/**/*.jpg'])
   .pipe(plugins.imagemin([
     plugins.imagemin.gifsicle({
       interlaced: true,
@@ -75,13 +79,13 @@ gulp.task('img', () => {
     }),
     imageminJpegRecompress({
       loops: 4,
-      min: 65,
-      max: 95,
+      min: 50,
+      max: 80,
       quality: 'high',
       strip: true,
       progressive: true
     }),
-    imageminPngquant({quality: '65-80'}),
+    imageminPngquant({quality: '50-80'}),
     plugins.imagemin.svgo({removeViewBox: true})
   ]))
   .pipe(gulp.dest('src/img'));
@@ -103,11 +107,11 @@ gulp.task('csslint', ['scss'], () => {
 });
 
 // Build task
-gulp.task('clean', () => {
+gulp.task('cleanBuild', () => {
   return del('build');
 });
 
-gulp.task('build', ['clean'], () => {
+gulp.task('build', ['cleanBuild'], () => {
   let html = gulp.src('src/*.html')
   .pipe(gulp.dest('build/'));
 
@@ -120,7 +124,7 @@ gulp.task('build', ['clean'], () => {
   let favicon = gulp.src(['src/favicon.*'])
   .pipe(gulp.dest('build'));
 
-  let icons = gulp.src(['src/img/icons.png'])
+  let icons = gulp.src(['src/img/icons.*'])
   .pipe(gulp.dest('build'));
 
   let fonts = gulp.src('src/fonts/**/*')

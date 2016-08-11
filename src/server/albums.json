@@ -3,7 +3,7 @@
     "id": "0",
     "year": "2015",
     "name": "Surprise without flaws",
-    "cover": "images/tracks/surprise_without_flaws/cover.png",
+    "cover": "images/tracks/surprise_without_flaws/cover.jpg",
     "tracks": [
       {
         "id": "0",
@@ -66,7 +66,7 @@
     "id": "1",
     "year": "2014",
     "name": "Mists of a shadow",
-    "cover": "images/tracks/mists_of_a_shadow/cover.png",
+    "cover": "images/tracks/mists_of_a_shadow/cover.jpg",
     "tracks": [
       {
         "id": "0",
@@ -93,7 +93,7 @@
     "id": "2",
     "year": "2013",
     "name": "Heroes of the sun",
-    "cover": "images/tracks/heroes_of_the_sun/cover.png",
+    "cover": "images/tracks/heroes_of_the_sun/cover.jpg",
     "tracks": [
       {
         "id": "0",
@@ -126,7 +126,7 @@
     "id": "3",
     "year": "2012",
     "name": "Picture of the past",
-    "cover": "images/tracks/picture_of_the_past/cover.png",
+    "cover": "images/tracks/picture_of_the_past/cover.jpg",
     "tracks": [
       {
         "id": "0",

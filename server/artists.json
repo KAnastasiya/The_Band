@@ -4,7 +4,7 @@
     "firstName": "Lawrie",
     "secondName": "Alton",
     "task": "Vocalist",
-    "photo": "images/band/alton.png",
+    "photo": "images/band/alton.jpg",
     "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magnam sed provident saepe obcaecati culpa molestias deserunt nisi repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magnam sed provident saepe obcaecati culpa molestias deserunt nisi repellat"
   },
   {
@@ -12,7 +12,7 @@
     "firstName": "Charles",
     "secondName": "Timmy",
     "task": "Guitar",
-    "photo": "images/band/timmy.png",
+    "photo": "images/band/timmy.jpg",
     "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magnam sed provident saepe obcaecati culpa molestias deserunt nisi repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magnam sed provident saepe obcaecati culpa molestias deserunt nisi repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
   },
   {
@@ -20,7 +20,7 @@
     "firstName": "Curt",
     "secondName": "Sheard",
     "task": "Bass",
-    "photo": "images/band/sheard.png",
+    "photo": "images/band/sheard.jpg",
     "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magnam sed provident saepe obcaecati culpa molestias deserunt nisi repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magnam sed provident saepe obcaecati culpa molestias deserunt nisi repellatLorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magnam sed provident saepe obcaecati culpa molestias deserunt nisi repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magnam sed provident saepe obcaecati culpa molestias deserunt nisi repellat"
   },
   {
@@ -28,7 +28,7 @@
     "firstName": "Cade",
     "secondName": "Ryker",
     "task": "Drums",
-    "photo": "images/band/ryker.png",
+    "photo": "images/band/ryker.jpg",
     "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magnam sed provident saepe obcaecati culpa molestias deserunt nisi repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magnam sed provident saepe obcaecati culpa molestias deserunt nisi repellat"
   },
   {
@@ -36,7 +36,7 @@
     "firstName": "Tommy",
     "secondName": "Brendan",
     "task": "Electronics",
-    "photo": "images/band/brendan.png",
+    "photo": "images/band/brendan.jpg",
     "descr": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit magnam sed provident saepe obcaecati culpa molestias deserunt nisi repellat. Lorem ipsum dolor sit amet, consectetur adipisicing elit"
   }
 ]

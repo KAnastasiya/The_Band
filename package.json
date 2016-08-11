@@ -1,6 +1,6 @@
 {
-  "name": "The Band",
-  "version": "1.0",
+  "name": "The_Band",
+  "version": "1.0.0",
   "author": "Anastasiia Kozenko",
   "main": "index.js",
   "devDependencies": {
