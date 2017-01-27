@@ -1,0 +1,23 @@
+.social {
+  display: inline-block;
+  flex: 0 0;
+  margin-left: 50px;
+
+  @media (max-width: $screen-xs-max) {
+   display: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-of-type) {
+      margin-right: 20px;
+    }
+  }
+}

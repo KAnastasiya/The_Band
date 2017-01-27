@@ -1,0 +1,49 @@
+section.music
+  a#music
+  div.row
+    // Chosen album cover
+    div.album__cover-container
+      img(src="").album__cover
+
+    // Audio player
+    section.player
+      h3.player__header Now playing
+      p.player__album
+      p.player__track
+
+      audio(preload="auto").audio
+        source(src="#" type="audio/ogg").audio__source-ogg
+        source(src="#" type="audio/mp3").audio__source-mp3
+        p Your browser does not support the audio tag
+
+      div.player__controls
+        button(type="button", title="Previous").player__prev
+        button(type="button").player__state
+        button(type="button", title="Next").player__next
+
+      div.player__progress
+        div.player__total-progress
+          div.player__current-progress
+
+  div.row
+    // Discography
+    section.discography
+      h3.discography__header Discography
+      ul.discography__list
+        template#discography-item
+          li.discography__item
+            p.album__name
+            p.album__year
+            div.album__controls
+              button(type="button").album__play Listen
+              button(type="button").album__buy Buy
+
+    // Playlist
+    section.playlist
+      h4.playlist__header Surprise without flaws
+      ul.playlist__list
+        template#playlist-item
+          li.playlist__item
+            button(type="button", title="Play").track__play
+            p.track__name
+            p.track__duration

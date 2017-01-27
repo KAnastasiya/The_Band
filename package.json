@@ -35,12 +35,12 @@
     "htmlhint-stylish": "*",
     "imagemin-jpeg-recompress": "*",
     "imagemin-pngquant": "*",
-    "jsdoc-webpack-plugin": "*",
     "vinyl-named": "*",
     "webpack": "*",
     "webpack-dev-server": "*",
     "webpack-hot-middleware": "*",
-    "webpack-stream": "*"
+    "webpack-stream": "*",
+    "babel-core": "^6.22.1"
   },
   "engines": {
     "node": "^5.0.0"

@@ -1,6 +1,5 @@
 const webpack = require('webpack'),
-  path = require('path'),
-  JsDocPlugin = require('jsdoc-webpack-plugin');
+  path = require('path');
 
 module.exports = {
   watch: true,
@@ -34,9 +33,6 @@ module.exports = {
         unused: true,
         collapse_vars: true,
       }
-    }),
-    new JsDocPlugin({
-      conf: './jsdoc.json'
     })
   ]
 };

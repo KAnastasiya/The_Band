@@ -1,0 +1,22 @@
+.row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: $page-vertical-margin $page-horizontal-margin;
+
+  @media (max-width: $screen-sm-max) {
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    padding: $page-vertical-margin--xs $page-horizontal-margin--xs;
+  }
+}
+
+.col {
+  flex: 1 1 50%;
+}
+
+@import './scss/discography';
+@import './scss/playlist';
+@import './scss/audio-player';
