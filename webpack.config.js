@@ -1,9 +1,10 @@
-const webpack = require('webpack'),
-  path = require('path');
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
-  watch: true,
   devtool: 'cheap-inline-module-source-map',
+
+  watch: true,
 
   module: {
     loaders: [{
@@ -19,12 +20,8 @@ module.exports = {
     }]
   },
 
-  eslint: {
-    configFile: '/.eslintrc'
-  },
-
   plugins: [
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
@@ -34,5 +31,9 @@ module.exports = {
         collapse_vars: true,
       }
     })
-  ]
+  ],
+
+  eslint: {
+    configFile: '/.eslintrc'
+  },
 };

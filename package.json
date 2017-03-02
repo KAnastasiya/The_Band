@@ -29,7 +29,6 @@
     "gulp-scss": "*",
     "gulp-sourcemaps": "*",
     "gulp-sync": "*",
-    "gulp-uncss": "*",
     "gulp.spritesmith": "*",
     "gulplog": "*",
     "htmlhint-stylish": "*",
@@ -41,8 +40,5 @@
     "webpack-hot-middleware": "*",
     "webpack-stream": "*",
     "babel-core": "^6.22.1"
-  },
-  "engines": {
-    "node": "^5.0.0"
   }
 }
