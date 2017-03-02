@@ -1,31 +1,22 @@
 section.contact
   a#contact
   div.contact__container
-    // Background
-    img(src="images/contact/img/contact-bg.jpg", alt="Contact background").contact__bg
-
+    img(src='images/contact/img/contact-bg.jpg', alt='Contact background').contact__bg
     div.contact__content
       div.contact__header-container
         p.contact__header Contact
         p.contact__phone +48 202 - 555 - 0114
-
       div.contact__data
-        // Subscribe
         div.subscribe
-          button(type="submite").subscribe__btn Subscribe
-          input(type="text").subscribe__input
-
-        // Social
+          button(type='submite').subscribe__btn Subscribe
+          input(id='subscribe', type='text').subscribe__input
+          label(for='subscribe').sr-only Your email
         div.social
           ul.social__list
             li.social__item
-              a(href="#", target="_blank").icon--facebook
+              a(href='#', target='_blank').icon--facebook.sr-only Facebook
             li.social__item
-              a(href="#", target="_blank").icon--youtube
-
-    // Footer
+              a(href='#', target='_blank').icon--youtube.sr-only YouTube
     footer.page-footer
       p.page-footer__text Copyright 2016 © by The Band
-
-      // Navigation
       include ../navigation/navigation
