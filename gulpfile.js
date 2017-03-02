@@ -18,7 +18,7 @@ const PUBLIC = './';
 gulp.task('pug', () => {
   return gulp.src(SRC + '/*.pug')
   .pipe(plugins.plumber({ errorHandler: plugins.notify.onError() }))
-  .pipe(plugins.pug({ pretty: true }))
+  .pipe(plugins.pug())
   .pipe(gulp.dest(PUBLIC));
 });
 
