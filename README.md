@@ -24,4 +24,4 @@ Site of music band.
 
 ### Demo
 
-If you want see, how site look like, click [this link] (http://kanastasiya.github.io/The_Band)
+If you want see, how site look like, click [this link](http://kanastasiya.github.io/The_Band)
